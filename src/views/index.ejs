@@ -1,0 +1,19 @@
+<html lang="en">
+  <%- include('./componentes/head.ejs') %>
+  <body>
+    <%- include('./componentes/navbar.ejs') %>
+    <div class="content">
+      <%if (users.length > 0) {%> <%users.forEach(user => { %>
+
+      <h3 class="title"><%=user.nome%> - <%=user.telefone%></h3>
+
+      <p><%=user.email%></p>
+
+      <%})%> <%} else {%>
+
+      <p>Não há usuários para exibir.</p>
+
+      <%}%>
+    </div>
+  </body>
+</html>
